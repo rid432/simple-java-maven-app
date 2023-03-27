@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">    
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.mycompany.app</groupId>
   <artifactId>my-app</artifactId>
@@ -16,8 +16,22 @@
     </dependency>
   </dependencies>
   <properties>
+    <sonar.host.url>http:172.31.30.35:9000/</sonar.host.url>
+    <sonar.login>eb24f59f9021eaf5de3226bdea5cbeb2cab6c2f3</sonar.login>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+<distributionManagement>
+            <repository>
+              <id>nexus</id>
+              <name>Landmark Technologies Releases Nexus Repository</name>
+              <url>http://172.31.31.59:8081/mynexuspath/repository/simple-java/</url>
+            </repository>
+            <snapshotRepository>
+              <id>nexus</id>
+              <name>Landmark Technologies Snapshot Nexus Repository </name>
+              <url>http://172.31.31.59:8081/mynexuspath/repository/simple-java-snapshot/</url>        
+            </snapshotRepository>
+        </distributionManagement>
   <build>
     <pluginManagement>
       <plugins>
